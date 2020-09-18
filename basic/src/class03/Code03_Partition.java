@@ -11,8 +11,8 @@ public class Code03_Partition {
         }
 
         System.out.println();
-        int[] arr2 = {1, 23, 4, 54, 54, 562, 31, 14, 5, 15, 6, 7, 2, 20, 20, 20};
-        System.out.println(partition2(arr2, 0, arr2.length - 1, 15));
+        int[] arr2 = {1, 23, 4, 54, 54, 562, 31, 14, 5, 15, 6, 7, 2, 20, 20, 13};
+        System.out.println(partition2(arr2, 0, arr2.length - 1, 14));
         for (int i : arr2) {
             System.out.print(i + "=");
         }
@@ -28,7 +28,7 @@ public class Code03_Partition {
         }
 
         System.out.println();
-        int[] arr4 = {1, 23, 4, 54, 54, 562, 31, 14, 5, 14, 6, 7, 2, 20, 20, 20};
+        int[] arr4 = {1, 23, 4, 54, 54, 562, 31, 14, 5, 14, 6, 7, 2, 20, 20, 13};
         int[] res = netherlandsFlag2(arr4, 0, arr4.length - 1, 14);
         for(int i: res){
             System.out.print("res =" + i + ",");
@@ -71,7 +71,7 @@ public class Code03_Partition {
         }
         int lessEqual = L - 1;
         int index = L;
-        while (index < R) {
+        while (index <= R) {
             if (arr[index] <= num) {
                 swap(arr, ++lessEqual, index);
             }
